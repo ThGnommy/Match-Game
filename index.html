@@ -4,15 +4,15 @@
   <title>Match Game</title>
   <link href="https://fonts.googleapis.com/css?family=Work+Sans:400,900" rel="stylesheet">
   <link rel="stylesheet" href="./resources/css/reset.css">
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
   <link rel="stylesheet" href="./resources/css/style.css">
   <link href="favicon.png" rel="icon" type="image/x-icon" />
 </head>
-<body>
-
+<body onload="win()">
   <div class="container">
     <div class="row">
-      <div class="col-md-3 col-xs-12">
+      <div class="col-md-3 col-sm-12">
         <h1>Match Game</h1>
         <h2>Rules</h2>
         <p>Click on a card to reveal the number on the other side. Click on a
@@ -20,95 +20,18 @@
           pair will be removed from play. If not, try again!</p>
         <h2>How To Win</h2>
         <p>You win when all pairs have been found.</p>
+        <button id="NewGame">New Game</button>
+        <h2 id="win"></h2>
       </div>
-
-      <div class="col-md-9 col-xs-12" id="game">
-
-        <div class="row">
-
-          <div class="card col-3">1</div>
-          <div class="card col-3">2</div>
-          <div class="card col-3">3</div>
-          <div class="card col-3">4</div>
-          <div class="card col-3">5</div>
-          <div class="card col-3"></div>
-          <div class="card col-3">
-
-          </div>
-          <div class="card col-3">
-
-          </div>
-          <div class="card col-3">
-
-          </div>
-          <div class="card col-3">
-
-          </div>
-          <div class="card col-3">
-
-          </div>
-          <div class="card col-3">
-
-          </div>
-          <div class="card col-3">
-
-          </div>
-          <div class="card col-3">
-
-          </div>
-          <div class="card col-3">
-
-          </div>
-          <div class="card col-3">
-
-          </div>
-
-
-
-        </div>
+      <div class="col-md-9 col-sm-12" id="game"></div>
       </div>
     </div>
-
   </div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
   <!-- ..SCRIPTS.. -->
   <script
     src="https://code.jquery.com/jquery-3.1.1.min.js"
     integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="
     crossorigin="anonymous"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
-          integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
-          crossorigin="anonymous"></script>
-
   <script type="text/javascript" src="./resources/js/match-game.js"></script>
   <script type="text/javascript" src="./resources/js/tests.js"></script>
 </body>

@@ -13,30 +13,82 @@ body {
 
 h1 {
   font-weight: bold;
-  font-size: 2.5rem;
+  font-size: 3.5rem;
   color: rgb(32, 64, 89);
 }
 
 h2 {
-  font-size: 1rem;
+  font-size: 2rem;
   font-weight: bold;
+}
+
+#win {
+  font-weight: bold;
+  font-size: 5rem;
+  color: hsl(160, 85%, 65%);
+  padding: 3rem 0;
+  -webkit-animation: flash linear 1s infinite;
+	animation: flash linear 1s infinite;
+}
+
+@-webkit-keyframes flash {
+	0% { opacity: 1; }
+	50% { opacity: .1; }
+	100% { opacity: 1; }
+}
+@keyframes flash {
+	0% { opacity: 1; }
+	50% { opacity: .1; }
+	100% { opacity: 1; }
+}
+
+p {
+  font-size: 1.5rem;
+  color: rgb(74, 74, 74);
 }
 
 .card {
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 12.5rem;
-  height: 12.5rem;
+  height: 18.5rem;
+  border: 4px solid rgb(255, 242, 242);
+  border-radius: 8px;
   background-color: rgb(32, 64, 86);
-  border: 4px solid white;
-  border-radius: 10px;
-  font-style: "Work Sans", sans-serif;
-  font-weight: 900;
   font-size: 7rem;
+  font-weight: 900;
   color: rgb(255, 255, 255);
+  cursor: pointer;
 }
 
 .card:hover {
   cursor: pointer;
+  opacity: 0.9;
+}
+
+button {
+  font-weight: bold;
+  font-size: 3.5rem;
+  color: rgb(255, 242, 242);
+  border: none;
+  background-color: rgb(32, 64, 86);
+  padding: 20px;
+  border-radius: 4px;
+  -webkit-user-select: none;
+}
+
+button:active {
+  transition: all 0.1s;
+  transform: scale(0.9);
+}
+
+.win-text {
+  margin-top: 5.25rem;
+}
+
+.win-text h2{
+  text-align: center;
+  font-weight: bold;
+  font-size: 4rem;
+  color: rgb(32, 64, 89);
 }
