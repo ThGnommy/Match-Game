@@ -6,14 +6,13 @@ document.getElementById("NewGame").onclick = function() {
   var values = MatchGame.generateCardValues();
   MatchGame.renderCards(values, $game);
   document.getElementById("win").innerHTML="";
-  document.getElementById("timerBox").style.display = "none";
   MatchGame.timer.reset();
   MatchGame.timer.addEventListener('secondsUpdated', function (e) {
       $('#time').html(MatchGame.timer.getTimeValues().toString());
   });
   MatchGame.timer.stop()
+  $("#timerBox").hide( "slide", { direction: "left" }, "slow" );
 };
-
 
 $(document).ready(function() {
 
@@ -100,6 +99,7 @@ MatchGame.timerStart = 16;
     MatchGame.timerStart--;
     clickSound.play();
 
+
     if(MatchGame.timerStart === 15)
     {
       MatchGame.timer.start();
@@ -167,6 +167,7 @@ MatchGame.flipCard = function($card, $game) {
     });
 		setTimeout(winAudio, 500);
     document.getElementById("timerBox").style.display = "block";
+    $("#timerBox").effect("slide", 1000);
   }
 
   function matchAudio()
