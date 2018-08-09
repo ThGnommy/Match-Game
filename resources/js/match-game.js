@@ -10,7 +10,7 @@ document.getElementById("NewGame").onclick = function() {
   MatchGame.timer.addEventListener('secondsUpdated', function (e) {
       $('#time').html(MatchGame.timer.getTimeValues().toString());
   });
-  MatchGame.timer.stop()
+  MatchGame.timer.stop();
   $("#timerBox").hide( "slide", { direction: "left" }, "slow" );
 };
 
