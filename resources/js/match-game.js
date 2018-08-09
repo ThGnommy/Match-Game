@@ -159,7 +159,7 @@ MatchGame.flipCard = function($card, $game) {
       $game.data('flippedCards', []);
     }
 
-    if (MatchGame.flippedCards === 7)
+    if (MatchGame.flippedCards === 0)
 	{
     MatchGame.timer.stop();
     MatchGame.timer.addEventListener('secondsUpdated', function (e) {
